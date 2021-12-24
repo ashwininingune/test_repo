@@ -1,0 +1,29 @@
+<mat-card class="mat-elevation-z8">
+    <mat-card-header>
+        <mat-card-title>Add New Students Data</mat-card-title>
+        <mat-card-subtitle>Fill the correct data</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="updateForm" novalidate>
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput type="text" placeholder="Your Full Name" formControlName="fullname">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Age</mat-label>
+                <input matInput type="number" placeholder="Your age" formControlName="age">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Mobile</mat-label>
+                <input matInput type="number" placeholder="Your Mobile Number" formControlName="mobile">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput type="email" placeholder="Your Email Id" formControlName="email">
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-raised-button color="primary" (click)="updateData()">Update</button>
+    </mat-card-actions>
+</mat-card>

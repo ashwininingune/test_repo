@@ -1,0 +1,34 @@
+mat-card {
+    width: 500px;
+    height: auto;
+    margin-top: 150px;
+    margin-right: 350px;
+    margin-left: 350px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ff4081;
+    color: white;
+}
+
+.backgroun-color {
+    background-color: #3f51b5;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+mat-card-title {
+    margin-left: 50px;
+    color: white;
+}
+
+mat-card-subtitle {
+    color: white;
+    font-size: 25px;
+    margin-left: 150px;
+    font-weight: bold;
+}

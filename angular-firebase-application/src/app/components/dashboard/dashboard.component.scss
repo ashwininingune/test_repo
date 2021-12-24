@@ -1,0 +1,26 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-sidenav-content {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+mat-sidenav {
+    width: 200px;
+}
+
+mat-icon {
+    margin-right: 8px;
+}
