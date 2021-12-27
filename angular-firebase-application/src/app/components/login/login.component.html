@@ -10,24 +10,18 @@
                 <mat-error *ngIf="errorHandling('email', 'required')">
                     You must provide your <strong>email</strong>
                 </mat-error>
-                <mat-error *ngIf="errorHandling('email', 'email')">
-                    Please enter a <strong>valid email address</strong>
-                </mat-error>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Password</mat-label>
-                <input matInput type="password" formControlName="password">
+                <input matInput type="password" autofocus formControlName="password">
                 <mat-error *ngIf="errorHandling('password', 'required')">
                     You must provide your <strong>password</strong>
-                </mat-error>
-                <mat-error *ngIf="errorHandling('password', 'minLength')">
-                    <strong>Minimum 8 characters</strong> required
                 </mat-error>
             </mat-form-field>
         </form>
     </mat-card-content>
     <mat-card-actions align="end">
         <button mat-raised-button style="margin-right: 10px;" routerLink="/">Cancel</button>
-        <button mat-raised-button style="margin-right: 10px;" [disabled]="loginForm.invalid" color="primary" (click)="login()">Login</button>
+        <button mat-raised-button style="margin-right: 10px;" color="primary" (click)="login()">Login</button>
     </mat-card-actions>
 </mat-card>

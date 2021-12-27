@@ -19,7 +19,6 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HotToastModule } from '@ngneat/hot-toast';
 
 
 @NgModule({
@@ -42,8 +41,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule,
-    HotToastModule.forRoot({position: 'top-center'})
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
