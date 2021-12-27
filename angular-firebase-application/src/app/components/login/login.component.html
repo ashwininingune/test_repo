@@ -10,12 +10,21 @@
                 <mat-error *ngIf="errorHandling('email', 'required')">
                     You must provide your <strong>email</strong>
                 </mat-error>
+                <mat-error *ngIf="errorHandling('email', 'email')">
+                    Please enter a Valid Email address
+                </mat-error>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Password</mat-label>
                 <input matInput type="password" autofocus formControlName="password">
                 <mat-error *ngIf="errorHandling('password', 'required')">
                     You must provide your <strong>password</strong>
+                </mat-error>
+                <mat-error *ngIf="errorHandling('password', 'minLength')">
+                    Password must be minimum 8 characters
+                </mat-error>
+                <mat-error *ngIf="errorHandling('password', 'pattern')">
+                    Password must be combination of 1 uppercase, 1 lowercase, 1 number and 1 special character
                 </mat-error>
             </mat-form-field>
         </form>
