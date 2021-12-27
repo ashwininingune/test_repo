@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
-import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-login',
@@ -14,12 +13,10 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   isSignedIn: boolean = false;
 
-  constructor(private authSrv: AuthenticationService, 
-              private router: Router, 
-              private formBuilder: FormBuilder) {
+  constructor(private authSrv: AuthenticationService, private formBuilder: FormBuilder) {
     this.loginForm = this.formBuilder.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required]
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]]
     })
   }
 
@@ -31,36 +28,11 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  async login() {
-    // console.log(this.loginForm.value);
+  login() {
     if(this.loginForm.invalid) {
       return;
     }
-
-    if(this.loginForm.valid) {
-      this.authSrv.signIn(this.loginForm.value.email, this.loginForm.value.password);
-
-      if(this.authSrv.isLoggedIn) {
-        this.isSignedIn = true;
-        Swal.fire({
-          icon: 'success',
-          title: 'Login successful',
-          showConfirmButton: true,
-        }).then(() => {
-          this.router.navigate(['/dashboard']);
-        })  
-      } 
-      else {
-        //show alert box for error
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Student not found',
-          showConfirmButton: true,
-        })
-      }
-      
-    }
+    this.authSrv.SignIn(this.loginForm.value.email, this.loginForm.value.password);
   }
 
   public errorHandling = (control: string, error: string) => {
