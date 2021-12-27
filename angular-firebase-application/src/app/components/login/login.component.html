@@ -22,6 +22,6 @@
     </mat-card-content>
     <mat-card-actions align="end">
         <button mat-raised-button style="margin-right: 10px;" routerLink="/">Cancel</button>
-        <button mat-raised-button style="margin-right: 10px;" color="primary" (click)="login()">Login</button>
+        <button mat-raised-button style="margin-right: 10px;" [disabled]="loginForm.invalid" color="primary" (click)="login()">Login</button>
     </mat-card-actions>
 </mat-card>

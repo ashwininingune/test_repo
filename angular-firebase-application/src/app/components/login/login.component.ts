@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -37,30 +36,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    if(this.loginForm.valid) {
-      this.authSrv.signIn(this.loginForm.value.email, this.loginForm.value.password);
-
-      if(this.authSrv.isLoggedIn) {
-        this.isSignedIn = true;
-        Swal.fire({
-          icon: 'success',
-          title: 'Login successful',
-          showConfirmButton: true,
-        }).then(() => {
-          this.router.navigate(['/dashboard']);
-        })  
-      } 
-      else {
-        //show alert box for error
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Student not found',
-          showConfirmButton: true,
-        })
-      }
-      
-    }
+    this.authSrv.signIn(this.loginForm.value.email, this.loginForm.value.password);
   }
 
   public errorHandling = (control: string, error: string) => {
