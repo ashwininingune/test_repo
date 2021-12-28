@@ -1,12 +1,10 @@
 mat-card {
-    margin: 180px 400px;
-    width: 400px;
-    height: 270px;
     background-color: lightyellow;
     border-radius: 10px;
+    margin-top: 180px;
 }
 
-.backgroun-color {
+.background-color {
     background-color: #3f51b5;
     width: 100%;
     color: white;
@@ -15,4 +13,16 @@ mat-card {
 
 mat-form-field {
     width: 100%;
+}
+
+mat-card-subtitle {
+    color: white;
+    font-size: 25px;
+    margin-left: 200px;
+    font-weight: bold;
+}
+
+mat-card-title {
+    margin-left: 60px;
+    color: white;
 }

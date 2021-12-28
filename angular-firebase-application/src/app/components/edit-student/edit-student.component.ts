@@ -53,4 +53,8 @@ export class EditStudentComponent implements OnInit {
     })
   }
 
+  public errorHandling = (control: string, error: string) => {
+    return this.updateForm.controls[control].hasError(error);
+  }
+
 }

@@ -44,4 +44,8 @@ export class CreateStudentComponent implements OnInit {
     }
   }
 
+  public errorHandling = (control: string, error: string) => {
+    return this.studentForm.controls[control].hasError(error);
+  }
+
 }

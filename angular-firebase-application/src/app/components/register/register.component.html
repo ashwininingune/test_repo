@@ -1,36 +1,45 @@
-<mat-card class="mat-elevation-z8">
-    <mat-card-header class="backgroun-color">
-        <mat-card-title>MIT School of Business Management</mat-card-title>
-        <mat-card-subtitle>Registration</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-        <form [formGroup]="signupForm" novalidate>
-            <mat-form-field>
-                <mat-label>Email</mat-label>
-                <input matInput type="email" placeholder="Email address" formControlName="email">
-                <mat-error *ngIf="errorHandling('email', 'required')">
-                    You must provide your <strong>email</strong>
-                </mat-error>
-                <mat-error *ngIf="errorHandling('email', 'email')">
-                    Please enter a Valid Email address
-                </mat-error>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Password</mat-label>
-                <input matInput type="password" placeholder="Password" formControlName="password">
-                <mat-error *ngIf="errorHandling('password', 'required')">
-                    You must provide your <strong>password</strong>
-                </mat-error>
-                <mat-error *ngIf="errorHandling('password', 'minLength')">
-                    Password must be minimum 8 characters
-                </mat-error>
-                <mat-error *ngIf="errorHandling('password', 'pattern')">
-                    Password must be combination of 1 uppercase, 1 lowercase, 1 number and 1 special character
-                </mat-error>
-            </mat-form-field>
-        </form>
-    </mat-card-content>
-    <mat-card-actions align="end">
-        <button mat-raised-button style="margin-right: 10px; margin-bottom: 10px;" [disabled]="signupForm.invalid" type="submit" (click)="register()">Register</button>
-    </mat-card-actions>
-</mat-card>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <mat-card class="mat-elevation-z8">
+                <mat-card-header class="backgroun-color">
+                    <mat-card-title>MIT School of Business Management</mat-card-title>
+                    <mat-card-subtitle>Registration</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <form [formGroup]="signupForm" novalidate>
+                        <mat-form-field>
+                            <mat-label>Email</mat-label>
+                            <input matInput type="email" placeholder="Email address" formControlName="email">
+                            <mat-error *ngIf="errorHandling('email', 'required')">
+                                You must provide your <strong>email</strong>
+                            </mat-error>
+                            <mat-error *ngIf="errorHandling('email', 'email')">
+                                Please enter a Valid Email address
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" placeholder="Password" formControlName="password">
+                            <mat-error *ngIf="errorHandling('password', 'required')">
+                                You must provide your <strong>password</strong>
+                            </mat-error>
+                            <mat-error *ngIf="errorHandling('password', 'minLength')">
+                                Password must be minimum 8 characters
+                            </mat-error>
+                            <mat-error *ngIf="errorHandling('password', 'pattern')">
+                                Password must be combination of 1 uppercase, 1 lowercase, 1 number and 1 special character
+                            </mat-error>
+                        </mat-form-field>
+                    </form>
+                </mat-card-content>
+                <mat-card-actions align="end">
+                    <button mat-raised-button style="margin-right: 10px; margin-bottom: 10px;" routerLink="/">Cancel</button>
+                    <button mat-raised-button style="margin-right: 10px; margin-bottom: 10px;" color="primary" [disabled]="signupForm.invalid" type="submit" (click)="register()">Register</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
