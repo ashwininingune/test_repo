@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <mat-card class="mat-elevation-z8" *ngIf="authService.userData as user">
+                <mat-card-title>Hello, {{ user.email.substring(0, user.email.lastIndexOf("@")) | titlecase}}</mat-card-title>
+                <mat-card-subtitle>User ID: {{user.uid}}</mat-card-subtitle>
+                <mat-card-subtitle>Email: {{user.email}}</mat-card-subtitle>
+                <mat-card-subtitle>Email Verified: {{user.emailVerified}}</mat-card-subtitle>
+            </mat-card>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
