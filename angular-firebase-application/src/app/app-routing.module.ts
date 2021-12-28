@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ListStudentComponent } from './components/list-student/list-student.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { AuthGuard } from './services/auth.guard';
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
     component: DashboardComponent, 
     canActivate: [AuthGuard],
     children: [
+      {path: 'user-profile', component: UserProfileComponent},
       {path: 'list', component: ListStudentComponent},
       {path: 'add', component: CreateStudentComponent},
       {path: 'edit/:id', component: EditStudentComponent}

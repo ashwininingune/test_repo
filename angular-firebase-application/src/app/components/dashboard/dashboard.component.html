@@ -1,16 +1,21 @@
 <mat-toolbar class="mat-elevation-z8">
-    Student Self Service Portal
+    <button mat-icon-button (click)="toggleSidenav()">
+    <mat-icon>menu</mat-icon>
+    </button> Student Self Service Portal
     <span class="example-spacer"></span>
-    <button mat-raised-button color="accent" (click)="logout()">
+    <button mat-raised-button color="warn" (click)="logout()">
         <mat-icon>person</mat-icon>Logout</button>
 </mat-toolbar>
 <mat-sidenav-container>
-    <mat-sidenav opened mode="side" #sidenav class="mat-elevation-z8">
+    <mat-sidenav #sidenav [opened]="isShowing" mode="side" class="mat-elevation-z8">
         <button mat-button class="menu-button" [matMenuTriggerFor]="belowMenu">Main menu <mat-icon style="padding-left: 60px;">arrow_drop_down</mat-icon></button>
         <mat-menu #belowMenu="matMenu">
             <ng-template matMenuContent>
+                <button mat-menu-item routerLink="/dashboard/user-profile">
+                    <mat-icon>person</mat-icon> User Profile
+                </button>
                 <button mat-menu-item routerLink="/dashboard/list">
-                    <mat-icon>person</mat-icon>Student Information
+                    <mat-icon>school</mat-icon>Student Information
                 </button>
             </ng-template>
         </mat-menu>

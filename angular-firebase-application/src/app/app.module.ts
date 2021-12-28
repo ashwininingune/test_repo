@@ -20,6 +20,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HotToastModule } from '@ngneat/hot-toast';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

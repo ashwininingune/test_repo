@@ -8,15 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor(private authSrv: AuthenticationService, private router: Router) { }
+  isShowing!: boolean;
+  constructor(private authService: AuthenticationService, 
+              private router: Router) {}
 
   ngOnInit(): void {
   }
 
+  toggleSidenav() {
+    this.isShowing = !this.isShowing;
+  }
+  
   logout() {
-    this.authSrv.signOut();
-    this.router.navigate(['/']);
+    this.authService.signOut();
   }
 
 }
