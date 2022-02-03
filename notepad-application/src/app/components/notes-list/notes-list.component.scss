@@ -1,0 +1,23 @@
+#addBtn {
+    bottom: 0;
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    font-size: medium;
+}
+
+mat-card {
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #f8f8f8;
+}
+
+.full-width {
+    width: 100%;
+}
+
+#dataDiv {
+    overflow: auto;
+    height: 400px;
+    padding: 10px;
+}
