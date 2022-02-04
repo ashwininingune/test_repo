@@ -1,0 +1,18 @@
+<div class="row mt-3">
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Filter</mat-label>
+        <input matInput [(ngModel)]="query">
+    </mat-form-field>
+</div>
+
+<div class="row mt-1">
+    <mat-card *ngFor="let note of allNotes | search: query" class="mat-elevation-z8">
+        <mat-card-content>
+            <button mat-icon-button style="float: right;" (click)="deleteNote(note.id)">
+                <mat-icon color="warn">close</mat-icon>
+            </button>
+            <h6>{{note.title}}</h6>
+            <h6>{{note.content}}</h6>
+        </mat-card-content>
+    </mat-card>
+</div>
