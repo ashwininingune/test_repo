@@ -1,3 +1,12 @@
 mat-card {
     margin-top: 75px;
 }
+
+mat-card-title {
+    font-family: "Sofia", sans-serif;
+}
+
+mat-card-subtitle {
+    font: italic bold 12px/30px Georgia, serif;
+    color: black;
+}

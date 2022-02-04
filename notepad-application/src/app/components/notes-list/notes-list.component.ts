@@ -15,10 +15,10 @@ export class NotesListComponent implements OnInit {
   public search: any = '';
   query!: string;
 
-  constructor(private _notes: NotesService) { }
+  constructor(private notes: NotesService) { }
 
   ngOnInit(): void {
-    this._notes.getAllNotes().subscribe(res => {
+    this.notes.getAllNotes().subscribe(res => {
       this.notesData = res.map(item => {
         return {
           id: item.payload.doc.id,
@@ -31,7 +31,7 @@ export class NotesListComponent implements OnInit {
   }
 
   deleteNote(id: any) {
-    this._notes.deleteNote(id);
+    this.notes.deleteNote(id);
   }
 
 }

@@ -21,6 +21,10 @@ import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { NotepadComponent } from './components/notepad/notepad.component';
+import { NotesListComponent } from './components/notepad/notes-list/notes-list.component';
+import { AddNotesComponent } from './components/notepad/add-notes/add-notes.component';
+import { SearchPipe } from './services/search.pipe';
 
 
 @NgModule({
@@ -33,7 +37,11 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    NotepadComponent,
+    NotesListComponent,
+    AddNotesComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
