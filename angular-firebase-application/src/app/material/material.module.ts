@@ -12,11 +12,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const material = [
   MatToolbarModule, MatIconModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatCardModule,
   MatCheckboxModule, MatSidenavModule, MatListModule, MatMenuModule, MatTableModule, MatPaginatorModule,
-  MatSortModule
+  MatSortModule, MatTabsModule
 ];
 @NgModule({
   imports: [material],

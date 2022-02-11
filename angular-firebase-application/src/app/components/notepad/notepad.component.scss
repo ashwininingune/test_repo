@@ -1,7 +1,17 @@
 #addNotes {
-    padding: 15px;
+    padding: 25px;
 }
 
 #notesList {
-    padding: 15px;
+    padding: 25px;
+}
+
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar {
+    background-color: rgb(39, 184, 176) !important;
+}
+
+::ng-deep.mat-tab-label.mat-tab-label-active:not(.mat-tab-disabled),
+::ng-deep.mat-tab-label.mat-tab-label-active.cdk-keyboard-focused:not(.mat-tab-disabled) {
+    color: rgb(39, 184, 176) !important;
+    opacity: 1;
 }

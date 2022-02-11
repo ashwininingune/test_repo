@@ -1,9 +1,24 @@
-<div class="row">
-    <div class="col-md-4" id="addNotes">
+<div class="row mx-5">
+    <!-- <div class="col-md-4" id="addNotes">
         <app-add-notes></app-add-notes>
     </div>
     <div class="col-sm-1"></div>
     <div class="col-md-7" id="notesList">
         <app-notes-list></app-notes-list>
-    </div>
+    </div> -->
+
+    <mat-tab-group dynamicHeight mat-align-tabs="center" animationDuration="1000ms">
+        <mat-tab>
+            <ng-template mat-tab-label>Add Notes</ng-template>
+            <div id="addNotes">
+                <app-add-notes></app-add-notes>
+            </div>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>List of Notes</ng-template>
+            <div id="notesList">
+                <app-notes-list></app-notes-list>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
 </div>
