@@ -6,8 +6,14 @@
     font-size: medium;
 }
 
-h6 {
+#title {
+    font-weight: 600;
+    color: rebeccapurple;
+}
+
+#content {
     font-weight: normal;
+    color: gray;
 }
 
 mat-card {
